@@ -1,9 +1,23 @@
-const character = 'Volvo is not a car test';
+const form = document.querySelector(".new-item-form") as HTMLFormElement;
 
-console.log(character);
+const type = document.getElementById("type") as HTMLSelectElement;
+const toFrom = document.getElementById("tofrom") as HTMLInputElement;
+const details = document.getElementById("details") as HTMLInputElement;
+const amount = document.getElementById("amount") as HTMLInputElement;
 
-const inputs = document.querySelectorAll('input');
+form.addEventListener("submit", (e: Event) => {
+  e.preventDefault();
+  console.log(
+    type.value,
+    toFrom.value,
+    details.value,
+    amount.valueAsNumber
+    
+  );
 
-inputs.forEach(input => {
-  console.log(input);
+  
+
+  //console.log(details.value);
+ // console.log(amount.value);
+
 });
